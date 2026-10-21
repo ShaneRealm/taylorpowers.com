@@ -3,360 +3,241 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>Taylor Powers</title>
-<meta name="description" content="Taylor Powers, brand and creative production executive. Sponsorships, live events, brand launches and production across UFC, WWE, NASCAR, MotoGP and MLS.">
+<title>Taylor Powers · Brand & Creative Production</title>
+<meta name="description" content="Taylor Powers: VP of Brand, managing director and producer. Sponsorships, live events, brand launches and production across UFC, WWE, NASCAR, MotoGP, MLS and the Super Bowl, with a start in Hollywood VFX on Dune and Doctor Strange.">
+<meta property="og:title" content="Taylor Powers · Brand & Creative Production">
+<meta property="og:description" content="Sponsorships, live events, brand launches and production. From Hollywood VFX to the Super Bowl.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://taylorpowers.com">
+<meta property="og:image" content="https://taylorpowers.com/assets/img/daytona-97.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="theme-color" content="#0b0a12">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Cdefs%3E%3ClinearGradient id='g' x1='0' x2='1'%3E%3Cstop offset='0' stop-color='%235b5cf6'/%3E%3Cstop offset='.5' stop-color='%23e0607e'/%3E%3Cstop offset='1' stop-color='%23ffb347'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='64' height='64' rx='14' fill='%230b0a12'/%3E%3Ctext x='32' y='45' font-family='Arial Black,Impact,sans-serif' font-size='34' font-weight='900' text-anchor='middle' fill='url(%23g)'%3ETP%3C/text%3E%3C/svg%3E">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@600;800;900&family=Figtree:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap">
-<style>
-/* Layout: a stage at night. Big stadium type over a stage-light gradient, then a run-of-show of work, then the credits roll. */
-:root {
-  --bg: #0e0d16;
-  --surface: #17152a;
-  --fg: #f3f0fa;
-  --muted: #a49fbd;
-  --line: #2b2843;
-  --indigo: #5b5cf6;
-  --violet: #a35ce6;
-  --flame: #ff6b1a;
-  --gold: #ffc65a;
-  --accent: var(--flame);
-  --stage: linear-gradient(90deg, var(--indigo), var(--violet) 38%, #dd6680 58%, var(--flame) 78%, var(--gold));
-  --display: "Big Shoulders Display", "Oswald", "Arial Narrow", Impact, sans-serif;
-  --body: "Figtree", "Helvetica Neue", Arial, sans-serif;
-  --mono: "JetBrains Mono", ui-monospace, "SFMono-Regular", Menlo, monospace;
-  color-scheme: dark;
-}
-@media (prefers-color-scheme: light) {
-  :root:not([data-theme="dark"]) {
-    --bg: #faf9fd; --surface: #f0edf8; --fg: #16142a; --muted: #5d5878; --line: #dcd7ea;
-    --flame: #e2560a; --accent: #d14f08; color-scheme: light;
-  }
-}
-:root[data-theme="light"] {
-  --bg: #faf9fd; --surface: #f0edf8; --fg: #16142a; --muted: #5d5878; --line: #dcd7ea;
-  --flame: #e2560a; --accent: #d14f08; color-scheme: light;
-}
-
-* { box-sizing: border-box; }
-html { scroll-behavior: smooth; }
-@media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } *, *::before, *::after { animation: none !important; transition: none !important; } }
-body {
-  margin: 0; background: var(--bg); color: var(--fg);
-  font: 400 1.0625rem/1.65 var(--body);
-  -webkit-font-smoothing: antialiased;
-}
-a { color: inherit; }
-a:focus-visible, button:focus-visible { outline: 2px solid var(--gold); outline-offset: 3px; border-radius: 2px; }
-.wrap {
-  max-width: 1120px; margin: 0 auto;
-  padding-left: max(16px, env(safe-area-inset-left, 0px));
-  padding-right: max(16px, env(safe-area-inset-right, 0px));
-}
-@media (min-width: 720px) { .wrap { padding-left: max(32px, env(safe-area-inset-left, 0px)); padding-right: max(32px, env(safe-area-inset-right, 0px)); } }
-
-.label {
-  font: 500 0.75rem/1.2 var(--mono); letter-spacing: 0.14em; text-transform: uppercase; color: var(--muted);
-}
-
-/* Nav */
-.nav { padding-block: 22px; display: flex; justify-content: space-between; align-items: center; gap: 16px; flex-wrap: wrap; }
-.mark { font: 800 1.35rem/1 var(--display); letter-spacing: 0.04em; text-transform: uppercase; text-decoration: none; }
-.nav ul { list-style: none; margin: 0; padding: 0; display: flex; gap: 22px; flex-wrap: wrap; }
-.nav ul a { text-decoration: none; font: 500 0.78rem/1 var(--mono); letter-spacing: 0.12em; text-transform: uppercase; color: var(--muted); transition: color .2s; }
-.nav ul a:hover { color: var(--fg); }
-
-/* Hero */
-.hero { position: relative; padding-block: 56px 72px; overflow: hidden; }
-.hero::before {
-  content: ""; position: absolute; inset: -40% -10% auto; height: 120%;
-  background: radial-gradient(60% 50% at 20% 30%, color-mix(in srgb, var(--indigo) 30%, transparent), transparent 70%),
-              radial-gradient(50% 45% at 85% 20%, color-mix(in srgb, var(--flame) 26%, transparent), transparent 70%);
-  pointer-events: none; z-index: 0;
-}
-.hero > * { position: relative; z-index: 1; }
-.hero h1 {
-  margin: 18px 0 0; font: 900 clamp(4.2rem, 15vw, 11.5rem)/0.84 var(--display);
-  text-transform: uppercase; letter-spacing: -0.005em;
-}
-.hero h1 span {
-  background: var(--stage); -webkit-background-clip: text; background-clip: text; color: transparent;
-}
-.role { margin: 26px 0 0; font: 600 clamp(1.3rem, 2.6vw, 1.75rem)/1.25 var(--display); letter-spacing: 0.06em; text-transform: uppercase; }
-.lede { max-width: 60ch; margin: 18px 0 0; color: var(--muted); font-size: 1.125rem; }
-.lede strong { color: var(--fg); font-weight: 600; }
-.cta { display: flex; gap: 12px; flex-wrap: wrap; margin-top: 30px; }
-.btn {
-  display: inline-flex; align-items: center; gap: 10px; padding: 13px 20px; border-radius: 999px;
-  font: 600 0.95rem/1 var(--body); text-decoration: none; border: 1px solid var(--line); transition: transform .2s, border-color .2s;
-}
-.btn:hover { transform: translateY(-2px); border-color: var(--muted); }
-.btn.primary { background: var(--fg); color: var(--bg); border-color: var(--fg); }
-
-.stagebar { height: 6px; background: var(--stage); }
-
-/* Marquee of properties */
-.properties { border-bottom: 1px solid var(--line); overflow: hidden; padding-block: 18px; }
-.track { display: flex; gap: 48px; width: max-content; animation: roll 40s linear infinite; }
-.track span { font: 800 clamp(1.4rem, 3vw, 2rem)/1 var(--display); text-transform: uppercase; letter-spacing: 0.04em; white-space: nowrap; color: var(--muted); }
-.track span:nth-child(3n+1) { color: var(--fg); }
-@keyframes roll { to { transform: translateX(-50%); } }
-
-/* Sections */
-section.block { padding-block: 88px 0; }
-.head { display: grid; gap: 10px; margin-bottom: 40px; }
-.head h2 { margin: 0; font: 800 clamp(2.4rem, 6vw, 4rem)/0.95 var(--display); text-transform: uppercase; text-wrap: balance; }
-
-/* Numbers */
-.numbers { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); }
-.numbers div { padding: 28px 20px 26px 0; display: grid; gap: 6px; }
-.numbers div + div { padding-left: 20px; border-left: 1px solid var(--line); }
-.numbers b { font: 900 clamp(2.8rem, 6vw, 4.5rem)/0.9 var(--display); font-variant-numeric: tabular-nums; }
-.numbers div:nth-child(1) b { color: var(--indigo); }
-.numbers div:nth-child(2) b { color: var(--violet); }
-.numbers div:nth-child(3) b { color: var(--flame); }
-.numbers div:nth-child(4) b { color: var(--gold); }
-:root[data-theme="light"] .numbers div:nth-child(4) b { color: #c98a00; }
-@media (prefers-color-scheme: light) { :root:not([data-theme="dark"]) .numbers div:nth-child(4) b { color: #c98a00; } }
-.numbers span { color: var(--muted); font-size: 0.95rem; }
-@media (max-width: 760px) {
-  .numbers { grid-template-columns: repeat(2, minmax(0, 1fr)); }
-  .numbers div:nth-child(3) { padding-left: 0; border-left: 0; }
-  .numbers div:nth-child(n+3) { border-top: 1px solid var(--line); }
-}
-
-/* What I do */
-.disciplines { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 0; border-top: 1px solid var(--line); }
-.disciplines article { padding: 30px 28px 34px 0; border-bottom: 1px solid var(--line); display: grid; gap: 10px; align-content: start; }
-.disciplines article:nth-child(even) { padding-left: 28px; padding-right: 0; border-left: 1px solid var(--line); }
-.disciplines h3 { margin: 0; font: 800 1.9rem/1 var(--display); text-transform: uppercase; letter-spacing: 0.02em; }
-.disciplines p { margin: 0; color: var(--muted); max-width: 48ch; }
-.disciplines .tags { font: 400 0.8rem/1.6 var(--mono); color: var(--fg); opacity: .8; }
-@media (max-width: 720px) {
-  .disciplines { grid-template-columns: minmax(0, 1fr); }
-  .disciplines article, .disciplines article:nth-child(even) { padding-left: 0; padding-right: 0; border-left: 0; }
-}
-
-/* Run of show (experience) */
-.show { list-style: none; margin: 0; padding: 0; border-top: 1px solid var(--line); }
-.show li { display: grid; grid-template-columns: 190px minmax(0, 1fr); gap: 28px; padding-block: 34px; border-bottom: 1px solid var(--line); }
-.when { font: 500 0.82rem/1.5 var(--mono); color: var(--muted); font-variant-numeric: tabular-nums; }
-.when .tc { display: block; margin-top: 6px; color: var(--accent); }
-.show h3 { margin: 0; font: 800 clamp(1.8rem, 3.6vw, 2.4rem)/1 var(--display); text-transform: uppercase; }
-.show .title { margin: 6px 0 14px; font-weight: 600; }
-.show ul { margin: 0; padding-left: 1.1em; color: var(--muted); display: grid; gap: 8px; max-width: 70ch; }
-.show ul li { display: list-item; padding: 0; border: 0; }
-.show ul li::marker { color: var(--accent); }
-@media (max-width: 720px) { .show li { grid-template-columns: minmax(0, 1fr); gap: 10px; } }
-
-/* Credits roll */
-.credits { margin-top: 88px; background: var(--surface); padding-block: 72px; text-align: center; }
-.credits .label { display: block; margin-bottom: 26px; }
-.roll { display: grid; gap: 14px; }
-.roll .film { font: 800 clamp(1.8rem, 5vw, 3.2rem)/1 var(--display); text-transform: uppercase; }
-.roll .note { font: 400 0.8rem/1 var(--mono); color: var(--muted); letter-spacing: 0.1em; text-transform: uppercase; }
-.roll .pair { display: grid; gap: 6px; }
-.credits p.small { max-width: 56ch; margin: 34px auto 0; color: var(--muted); }
-
-/* Education + contact */
-.split { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 48px; }
-@media (max-width: 720px) { .split { grid-template-columns: minmax(0, 1fr); } }
-.edu h3 { margin: 10px 0 4px; font: 800 1.8rem/1 var(--display); text-transform: uppercase; }
-.edu p { margin: 0; color: var(--muted); }
-
-.contact { padding-block: 96px 64px; }
-.contact h2 { margin: 0; font: 900 clamp(3rem, 10vw, 7.5rem)/0.88 var(--display); text-transform: uppercase; text-wrap: balance; }
-.contact h2 span { background: var(--stage); -webkit-background-clip: text; background-clip: text; color: transparent; }
-.lines { margin-top: 36px; display: grid; gap: 0; border-top: 1px solid var(--line); }
-.lines a, .lines div { display: flex; justify-content: space-between; align-items: baseline; gap: 16px; flex-wrap: wrap; padding-block: 18px; border-bottom: 1px solid var(--line); text-decoration: none; }
-.lines a:hover .v { color: var(--accent); }
-.lines .v { font: 600 clamp(1.05rem, 2.4vw, 1.35rem)/1.3 var(--body); overflow-wrap: anywhere; transition: color .2s; }
-
-footer { padding-block: 28px 40px; display: flex; justify-content: space-between; gap: 16px; flex-wrap: wrap; }
-</style>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@600;800;900&family=Figtree:wght@400;500;600;700&family=Instrument+Serif:ital@0;1&family=JetBrains+Mono:wght@400;500&display=swap">
+<link rel="stylesheet" href="assets/site.css?v=1">
 </head>
 <body>
 
-<div class="stagebar" aria-hidden="true"></div>
-<header class="wrap nav">
-  <a class="mark" href="#top">Taylor Powers</a>
+<div class="grain" aria-hidden="true"></div>
+<div class="cursor-glow" aria-hidden="true"></div>
+
+<header class="nav" id="nav">
+  <a class="mark" href="#top" aria-label="Taylor Powers, home"><span class="mark-tp">TP</span><span class="mark-name">Taylor Powers</span></a>
   <nav aria-label="Sections">
     <ul>
       <li><a href="#work">Work</a></li>
+      <li><a href="#roles">Roles</a></li>
       <li><a href="#experience">Experience</a></li>
-      <li><a href="#credits">Credits</a></li>
-      <li><a href="#contact">Contact</a></li>
+      <li><a href="#credits">Film</a></li>
     </ul>
   </nav>
+  <a class="btn btn-sm primary" href="mailto:taylor@taylorpowers.com">Let's talk</a>
 </header>
 
 <main id="top">
-  <section class="wrap hero">
-    <span class="label">Chicago, IL · Events / Sponsorships / Brand launches / Production</span>
-    <h1>Taylor<br><span>Powers</span></h1>
-    <p class="role">Brand &amp; Creative Production Executive</p>
-    <p class="lede">I turn sponsorships into live moments fans remember, across <strong>UFC, WWE, NASCAR, MotoGP and MLS</strong>. I started in Hollywood VFX on <strong>Dune</strong> and <strong>Doctor Strange in the Multiverse of Madness</strong>, and I bring that production standard to every launch: ambitious creative, delivered on time and on budget.</p>
-    <div class="cta">
-      <a class="btn primary" href="#contact">Get in touch</a>
-      <a class="btn" href="https://www.linkedin.com/in/taylorpowers2026" target="_blank" rel="noopener">LinkedIn ↗</a>
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="hero-lights" aria-hidden="true"><i></i><i></i><i></i></div>
+    <div class="wrap hero-inner">
+      <p class="eyebrow reveal"><span class="live-dot"></span> Chicago · Brand · Sponsorships · Live events · Production</p>
+      <h1 class="hero-title">
+        <span class="line reveal">Taylor</span>
+        <span class="line reveal grad">Powers</span>
+      </h1>
+      <div class="hero-row">
+        <p class="hero-roles reveal" aria-live="polite">
+          <span class="roles-label">Currently cast as</span>
+          <span class="role-swap" id="roleSwap">VP of Brand</span>
+        </p>
+        <p class="lede reveal">I turn sponsorships into <em>live moments fans remember</em>, from fight night to race weekend to the Super Bowl. I started in Hollywood VFX on <strong>Dune</strong> and <strong>Doctor Strange</strong>, and every launch I run still gets that blockbuster production standard.</p>
+      </div>
+      <div class="cta reveal">
+        <a class="btn primary" href="#work">See the work <span aria-hidden="true">↓</span></a>
+        <a class="btn" href="mailto:taylor@taylorpowers.com">taylor@taylorpowers.com</a>
+      </div>
     </div>
+    <div class="hero-reel wrap reveal" id="heroReel" aria-label="Highlight reel"></div>
   </section>
 
-  <div class="properties" aria-label="Properties and brands">
+  <!-- MARQUEE -->
+  <div class="marquee" aria-label="Properties and brands">
     <div class="track">
-      <span>UFC</span><span>WWE</span><span>NASCAR</span><span>MotoGP</span><span>MLS · LAFC</span><span>Trackhouse Racing</span><span>Super Bowl</span><span>SuperFile</span><span>EGO</span><span>SKIL</span><span>FLEX</span>
-      <span aria-hidden="true">UFC</span><span aria-hidden="true">WWE</span><span aria-hidden="true">NASCAR</span><span aria-hidden="true">MotoGP</span><span aria-hidden="true">MLS · LAFC</span><span aria-hidden="true">Trackhouse Racing</span><span aria-hidden="true">Super Bowl</span><span aria-hidden="true">SuperFile</span><span aria-hidden="true">EGO</span><span aria-hidden="true">SKIL</span><span aria-hidden="true">FLEX</span>
+      <span>UFC</span><b>✦</b><span>WWE</span><b>✦</b><span>NASCAR</span><b>✦</b><span>MotoGP</span><b>✦</b><span>MLS · LAFC</span><b>✦</b><span>Trackhouse Racing</span><b>✦</b><span>Super Bowl</span><b>✦</b><span>SuperFile</span><b>✦</b><span>EGO</span><b>✦</b><span>SKIL</span><b>✦</b><span>FLEX</span><b>✦</b><span>Dune</span><b>✦</b><span>Marvel</span><b>✦</b>
+      <span aria-hidden="true">UFC</span><b aria-hidden="true">✦</b><span aria-hidden="true">WWE</span><b aria-hidden="true">✦</b><span aria-hidden="true">NASCAR</span><b aria-hidden="true">✦</b><span aria-hidden="true">MotoGP</span><b aria-hidden="true">✦</b><span aria-hidden="true">MLS · LAFC</span><b aria-hidden="true">✦</b><span aria-hidden="true">Trackhouse Racing</span><b aria-hidden="true">✦</b><span aria-hidden="true">Super Bowl</span><b aria-hidden="true">✦</b><span aria-hidden="true">SuperFile</span><b aria-hidden="true">✦</b><span aria-hidden="true">EGO</span><b aria-hidden="true">✦</b><span aria-hidden="true">SKIL</span><b aria-hidden="true">✦</b><span aria-hidden="true">FLEX</span><b aria-hidden="true">✦</b><span aria-hidden="true">Dune</span><b aria-hidden="true">✦</b><span aria-hidden="true">Marvel</span><b aria-hidden="true">✦</b>
     </div>
   </div>
 
-  <section class="wrap block" aria-label="Highlights">
-    <div class="numbers">
-      <div><b>$20M+</b><span>production managed at SuperFile</span></div>
-      <div><b>40B+</b><span>impressions for FLEX</span></div>
-      <div><b>5,000+</b><span>creative and sponsorship assets delivered</span></div>
-      <div><b>25+</b><span>person teams led</span></div>
-    </div>
+  <!-- NUMBERS -->
+  <section class="wrap numbers" aria-label="Highlights">
+    <div class="stat reveal"><b data-count="20" data-prefix="$" data-suffix="M+">$20M+</b><span>in production managed at SuperFile</span></div>
+    <div class="stat reveal"><b data-count="40" data-suffix="B+">40B+</b><span>impressions driven for FLEX</span></div>
+    <div class="stat reveal"><b data-count="5000" data-suffix="+">5,000+</b><span>creative &amp; sponsorship assets delivered</span></div>
+    <div class="stat reveal"><b data-count="25" data-suffix="+">25+</b><span>person teams led</span></div>
   </section>
 
-  <section class="wrap block" id="work">
-    <div class="head">
-      <span class="label">What I do</span>
-      <h2>From the pitch to the green light</h2>
+  <!-- WORK -->
+  <section class="block" id="work">
+    <div class="wrap head">
+      <p class="kicker reveal">01 · Selected work</p>
+      <h2 class="reveal">Big stages.<br><span class="serif">Bigger moments.</span></h2>
+      <p class="sub reveal">Sponsorships, activations, launches and spots I led, produced or shipped. Tap any tile to roll the tape.</p>
     </div>
-    <div class="disciplines">
-      <article>
-        <h3>Sponsorships</h3>
-        <p>Brought LAFC's MLS front-of-jersey sponsorship to life, and ran SuperFile's partnerships with Trackhouse Racing in NASCAR and MotoGP, UFC and WWE.</p>
-        <div class="tags">Rights activation · Partner deliverables · Sports &amp; entertainment</div>
+    <div class="wrap work-grid" id="workGrid"></div>
+  </section>
+
+  <!-- ROLES -->
+  <section class="block roles-block" id="roles">
+    <div class="wrap head">
+      <p class="kicker reveal">02 · Roles</p>
+      <h2 class="reveal">One person.<br><span class="serif">Every seat in the room.</span></h2>
+      <p class="sub reveal">I've sat in every chair a launch needs, from the coordinator's desk in a VFX house to the head of brand.</p>
+    </div>
+    <div class="wrap roles-grid">
+      <article class="role-card reveal" style="--c: var(--flame)">
+        <span class="role-no">01</span>
+        <h3>VP of Brand</h3>
+        <p>Took SuperFile to market and set its strategy across creative, content, production, live events and partnerships. Led a 20+ person organization.</p>
+        <span class="role-tag">SuperFile · 2025–2026</span>
       </article>
-      <article>
-        <h3>Events &amp; experiential</h3>
-        <p>Race-weekend, fight-night and live-event activations and VIP hospitality, from creative concept to on-site execution.</p>
-        <div class="tags">Live activations · VIP hospitality · Guest experience</div>
+      <article class="role-card reveal" style="--c: var(--gold)">
+        <span class="role-no">02</span>
+        <h3>Brand Management</h3>
+        <p>Brand architecture, positioning and launches for SuperFile, EGO, SKIL and FLEX, with one voice across every asset, partner and screen.</p>
+        <span class="role-tag">Strategy · Launches · Identity</span>
       </article>
-      <article>
-        <h3>Brand launches</h3>
-        <p>Launched the SuperFile brand, plus the EGO, SKIL and FLEX power tool brands and products, generating 40B+ impressions for FLEX.</p>
-        <div class="tags">Brand strategy · Product launches · Integrated campaigns</div>
+      <article class="role-card reveal" style="--c: var(--pink)">
+        <span class="role-no">03</span>
+        <h3>Managing Director</h3>
+        <p>Partner at Realm Agency: ran operations, new business and production strategy, with about $6M a year in production volume for a key client.</p>
+        <span class="role-tag">Realm Agency · 2024–2025</span>
       </article>
-      <article>
+      <article class="role-card reveal" style="--c: var(--violet)">
+        <span class="role-no">04</span>
+        <h3>Account Director</h3>
+        <p>Rose from Account Executive to Senior Account Director, leading strategy, scopes and budgets for the agency's top accounts, including MLS and NASCAR.</p>
+        <span class="role-tag">Realm Agency · 2021–2024</span>
+      </article>
+      <article class="role-card reveal" style="--c: var(--indigo)">
+        <span class="role-no">05</span>
         <h3>Production</h3>
-        <p>Produced Super Bowl advertising, the biggest stage in American media, and executive produced talent-led shoots, VFX, animation and post.</p>
-        <div class="tags">Live action · VFX &amp; animation · Budgets, vendors, agencies</div>
+        <p>Super Bowl advertising, talent-led shoots, race-weekend and fight-night activations, VIP hospitality, and post. Ambitious, on time, on budget.</p>
+        <span class="role-tag">Live action · Experiential · Post</span>
+      </article>
+      <article class="role-card reveal" style="--c: var(--cyan)">
+        <span class="role-no">06</span>
+        <h3>Visual Effects Producer</h3>
+        <p>Feature-film VFX at Wylie Co. and Digital Domain's Digital Human Group, the team behind the digital Thanos, on Dune and Doctor Strange.</p>
+        <span class="role-tag">Digital Domain · Wylie Co.</span>
       </article>
     </div>
   </section>
 
-  <section class="wrap block" id="experience">
-    <div class="head">
-      <span class="label">Experience</span>
-      <h2>Run of show</h2>
+  <!-- EXPERIENCE -->
+  <section class="block" id="experience">
+    <div class="wrap head">
+      <p class="kicker reveal">03 · Experience</p>
+      <h2 class="reveal">Run of show</h2>
     </div>
-    <ol class="show">
-      <li>
-        <div class="when">Nov 2025 – Oct 2026<span class="tc">Chicago</span></div>
-        <div>
+    <ol class="wrap show">
+      <li class="reveal">
+        <div class="when"><span>Nov 2025 – Oct 2026</span><span class="tc">Chicago</span></div>
+        <div class="what">
           <h3>SuperFile</h3>
           <p class="title">VP of Brand</p>
           <ul>
-            <li>Launched the SuperFile brand to market and set its strategy across creative, content, production, live events and partnerships, managing $20M+ in production.</li>
-            <li>Built the brand's sports and entertainment program: Trackhouse Racing in NASCAR and MotoGP, UFC, WWE and MLS.</li>
-            <li>Produced race-weekend, fight-night and live-event activations and VIP experiences, owning creative concepts, sponsorship assets, guest experience, on-site execution and partner deliverables.</li>
-            <li>Led a 20+ person organization spanning brand, strategy, creative, partnerships and production.</li>
+            <li>Launched the SuperFile brand and set its strategy across creative, content, production, live events and partnerships, managing $20M+ in production.</li>
+            <li>Built the sports &amp; entertainment program: Trackhouse Racing in NASCAR and MotoGP, UFC, WWE and MLS.</li>
+            <li>Produced race-weekend, fight-night and live-event activations and VIP experiences, end to end.</li>
+            <li>Produced Super Bowl advertising.</li>
           </ul>
         </div>
       </li>
-      <li>
-        <div class="when">May 2024 – Dec 2025</div>
-        <div>
+      <li class="reveal">
+        <div class="when"><span>May 2024 – Dec 2025</span></div>
+        <div class="what">
           <h3>Realm Agency</h3>
           <p class="title">Managing Director / Partner</p>
           <ul>
-            <li>Ran operations, client relationships, new business and production strategy, with project budgets up to $2M and about $6M in annual production volume for a key client.</li>
-            <li>Delivered 5,000+ creative, campaign and sponsorship assets, including launches for EGO, SKIL and FLEX; FLEX campaigns drove 40B+ impressions.</li>
+            <li>Ran operations, client relationships, new business and production strategy, with budgets up to $2M per project.</li>
+            <li>Delivered 5,000+ assets, including launches for EGO, SKIL and FLEX. FLEX campaigns drove 40B+ impressions.</li>
             <li>Activated LAFC's MLS front-of-jersey sponsorship and supported NASCAR sponsorships.</li>
-            <li>Executive produced talent-led shoots, VFX, animation and post-production from planning to final delivery.</li>
+            <li>Executive produced talent-led shoots, VFX, animation and post.</li>
           </ul>
         </div>
       </li>
-      <li>
-        <div class="when">Mar 2021 – Jul 2024</div>
-        <div>
+      <li class="reveal">
+        <div class="when"><span>Mar 2021 – Jul 2024</span></div>
+        <div class="what">
           <h3>Realm Agency</h3>
           <p class="title">Senior Account Director · Account Director · Account Executive</p>
           <ul>
-            <li>Rose from Account Executive to Senior Account Director, leading strategy, scopes and production budgets for the agency's top accounts, including MLS and NASCAR programs.</li>
-            <li>Managed partner communications, vendor selection, production and post workflows, approvals and final delivery.</li>
+            <li>Led strategy, scopes and production budgets for the agency's top accounts, including MLS and NASCAR programs.</li>
+            <li>Owned partner communications, vendor selection, production and post workflows through final delivery.</li>
           </ul>
         </div>
       </li>
-      <li>
-        <div class="when">Feb 2020 – Mar 2021</div>
-        <div>
+      <li class="reveal">
+        <div class="when"><span>Feb 2020 – Mar 2021</span></div>
+        <div class="what">
           <h3>Digital Domain</h3>
-          <p class="title">Visual Effects Coordinator</p>
+          <p class="title">Visual Effects · Digital Human Group</p>
           <ul>
-            <li>Coordinated production for the Digital Human Group, the team behind the digital Thanos, managing schedules, asset tracking and communication among artists and supervisors.</li>
+            <li>Ran production for the team behind the digital Thanos: schedules, asset tracking and artist–supervisor communication.</li>
           </ul>
         </div>
       </li>
-      <li>
-        <div class="when">Nov 2017 – Mar 2020</div>
-        <div>
+      <li class="reveal">
+        <div class="when"><span>Nov 2017 – Mar 2020</span></div>
+        <div class="what">
           <h3>Wylie Co.</h3>
-          <p class="title">Visual Effects Coordinator</p>
+          <p class="title">Visual Effects</p>
           <ul>
-            <li>Coordinated VFX and post-production delivery on feature films, documentaries and games through pipeline tracking and cross-team communication.</li>
+            <li>VFX and post delivery on feature films, documentaries and games, including Dune and Doctor Strange in the Multiverse of Madness.</li>
           </ul>
         </div>
       </li>
     </ol>
   </section>
 
+  <!-- FILM CREDITS -->
   <section class="credits" id="credits">
+    <div class="wrap head">
+      <p class="kicker reveal">04 · Film &amp; VFX</p>
+      <h2 class="reveal">Where the standard<br><span class="serif">was set.</span></h2>
+      <p class="sub reveal">Years in feature-film VFX taught me schedules, pipelines and the discipline of final delivery. Every live event and launch since has run on that.</p>
+    </div>
+    <div class="wrap posters" id="posters"></div>
+  </section>
+
+  <!-- CONTACT -->
+  <section class="contact" id="contact">
     <div class="wrap">
-      <span class="label">VFX credits</span>
-      <div class="roll">
-        <div class="pair"><span class="film">Dune</span></div>
-        <div class="pair"><span class="film">Doctor Strange in the Multiverse of Madness</span></div>
-        <div class="pair"><span class="film">Beastie Boys Story</span></div>
-        <div class="pair"><span class="film">Grand Theft Auto</span><span class="note">Video game</span></div>
-        <div class="pair"><span class="film">Thanos</span><span class="note">Digital Human Group</span></div>
+      <p class="kicker reveal">05 · Contact</p>
+      <h2 class="reveal">Let's make<br><span class="grad">the moment.</span></h2>
+      <a class="mail reveal" href="mailto:taylor@taylorpowers.com">taylor@taylorpowers.com <span aria-hidden="true">↗</span></a>
+      <div class="lines reveal">
+        <a href="https://www.linkedin.com/in/taylorpowers2026" target="_blank" rel="noopener"><span class="k">LinkedIn</span><span class="v">linkedin.com/in/taylorpowers2026 ↗</span></a>
+        <div><span class="k">Based in</span><span class="v">Chicago, IL</span></div>
+        <div><span class="k">Education</span><span class="v">University of Central Florida · Pre-Med, 2019</span></div>
       </div>
-      <p class="small">Years in feature-film VFX taught me schedules, pipelines and the discipline of final delivery. Every live event and launch since runs on that.</p>
-    </div>
-  </section>
-
-  <section class="wrap block">
-    <div class="split">
-      <div class="edu">
-        <span class="label">Education</span>
-        <h3>University of Central Florida</h3>
-        <p>Bachelor's Degree, Pre-Med, 2019</p>
-        <p>Tau Sigma · Pre-SOMA · International Medical Outreach</p>
-      </div>
-      <div class="edu">
-        <span class="label">Based in</span>
-        <h3>Chicago, IL</h3>
-        <p>Available for brand, sponsorship and production leadership roles, and for select projects.</p>
-      </div>
-    </div>
-  </section>
-
-  <section class="wrap contact" id="contact">
-    <span class="label">Contact</span>
-    <h2>Let's make <span>the moment.</span></h2>
-    <div class="lines">
-      <a href="mailto:Taylorraepowers@icloud.com"><span class="label">Email</span><span class="v">Taylorraepowers@icloud.com</span></a>
-      <a href="https://www.linkedin.com/in/taylorpowers2026" target="_blank" rel="noopener"><span class="label">LinkedIn</span><span class="v">linkedin.com/in/taylorpowers2026 ↗</span></a>
     </div>
   </section>
 </main>
 
-<footer class="wrap">
-  <span class="label">© 2026 Taylor Powers</span>
-  <span class="label">Taylorpowers.com</span>
+<footer class="wrap foot">
+  <span>© 2026 Taylor Powers</span>
+  <span>Brand · Sponsorships · Live events · Production</span>
 </footer>
-<div class="stagebar" aria-hidden="true"></div>
+
+<dialog class="player" id="player" aria-label="Video player">
+  <button class="close" id="playerClose" aria-label="Close video">✕</button>
+  <div class="frame" id="playerFrame"></div>
+  <p class="player-cap" id="playerCap"></p>
+</dialog>
+
+<script src="assets/site.js?v=1" defer></script>
 </body>
 </html>
