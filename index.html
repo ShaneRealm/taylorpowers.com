@@ -17,7 +17,7 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@300;400;500;600&display=swap">
 <link rel="preload" as="image" href="assets/video/reel-poster.jpg">
-<link rel="stylesheet" href="assets/site.css?v=7">
+<link rel="stylesheet" href="assets/site.css?v=8">
 </head>
 <body>
 
@@ -32,23 +32,16 @@
 </header>
 
 <main>
-  <!-- Hero: the showreel plays inside the name, then the letters zoom open into full screen -->
+  <!-- Hero: the name over a framed showreel that grows to full screen as you scroll -->
   <section class="reel" id="reel" aria-label="Introduction">
-    <div class="reel-stage">
-      <video class="reel-video" id="heroVideo" autoplay muted loop playsinline preload="auto" poster="assets/video/reel-poster.jpg" aria-hidden="true">
-        <source src="assets/video/reel.mp4" type="video/mp4">
-      </video>
-      <svg class="reel-mask" id="reelMask" aria-hidden="true">
-        <defs>
-          <mask id="nameMask" maskUnits="userSpaceOnUse" x="0" y="0" width="100%" height="100%">
-            <rect width="100%" height="100%" fill="#fff"/>
-            <text class="mask-text" text-anchor="middle" fill="#000"><tspan class="l1">Taylor</tspan><tspan class="l2">Powers</tspan></text>
-          </mask>
-        </defs>
-        <rect width="100%" height="100%" fill="#fff" mask="url(#nameMask)"/>
-        <text class="mask-text measure" text-anchor="middle" fill="none"><tspan class="l1">Taylor</tspan><tspan class="l2">Powers</tspan></text>
-      </svg>
-      <h1 class="sr-only">Taylor Powers</h1>
+    <div class="reel-stage" id="reelStage">
+      <h1 class="reel-name" id="reelName"><span>Taylor</span> <span>Powers</span></h1>
+      <div class="reel-frame" id="reelFrame">
+        <video class="reel-video" id="heroVideo" autoplay muted loop playsinline preload="auto" poster="assets/video/reel-poster.jpg" aria-hidden="true">
+          <source src="assets/video/reel.mp4" type="video/mp4">
+        </video>
+        <div class="reel-shade" id="reelShade"></div>
+      </div>
       <div class="reel-intro" id="reelIntro">
         <p>Brand, partnerships and production for sports and entertainment.</p>
         <span class="scroll-cue">Scroll</span>
@@ -271,7 +264,6 @@
   <div class="player-bar"><span id="playerTitle"></span><button type="button" id="playerClose">Close</button></div>
 </dialog>
 
-<script src="https://cdn.jsdelivr.net/npm/lenis@1.1.13/dist/lenis.min.js" defer></script>
-<script src="assets/site.js?v=7" defer></script>
+<script src="assets/site.js?v=8" defer></script>
 </body>
 </html>
