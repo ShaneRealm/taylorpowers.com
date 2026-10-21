@@ -1,20 +1,10 @@
-// Hero slideshow, header state, scroll reveals, cursor label and the video lightbox.
+// Hero video, header state, scroll reveals, cursor label and the video lightbox.
 (() => {
   const still = matchMedia('(prefers-reduced-motion: reduce)').matches;
 
-  // Hero slideshow
-  const slides = [...document.querySelectorAll('.slide')];
-  const no = document.getElementById('slideNo');
-  const cap = document.getElementById('slideCap');
-  let cur = 0;
-  if (slides.length > 1 && !still) setInterval(() => {
-    slides[cur].classList.remove('is-on');
-    cur = (cur + 1) % slides.length;
-    slides[cur].classList.add('is-on');
-    no.textContent = String(cur + 1).padStart(2, '0');
-    cap.style.opacity = 0;
-    setTimeout(() => { cap.textContent = slides[cur].dataset.caption; cap.style.opacity = 1; }, 400);
-  }, 5200);
+  // Hero video: respect reduced motion, and pause it while the full reel is open
+  const heroVideo = document.getElementById('heroVideo');
+  if (still && heroVideo) heroVideo.pause();
 
   // Header turns dark once past the hero
   const top = document.getElementById('top');
@@ -53,6 +43,17 @@
   const frame = document.getElementById('playerFrame');
   const title = document.getElementById('playerTitle');
   function open(el) {
+    if (el.dataset.video) {
+      if (typeof dlg.showModal !== 'function') { window.open(el.dataset.video, '_blank', 'noopener'); return; }
+      const v = document.createElement('video');
+      v.src = el.dataset.video; v.controls = true; v.autoplay = true; v.playsInline = true;
+      frame.replaceChildren(v);
+      title.textContent = el.dataset.title || '';
+      cursor.classList.remove('show');
+      heroVideo?.pause();
+      dlg.showModal();
+      return;
+    }
     const src = el.dataset.yt
       ? `https://www.youtube-nocookie.com/embed/${el.dataset.yt}?autoplay=1&rel=0&modestbranding=1`
       : `https://player.vimeo.com/video/${el.dataset.vimeo}?autoplay=1&title=0&byline=0&portrait=0`;
@@ -66,11 +67,11 @@
     dlg.showModal();
   }
   const close = () => { if (dlg.open) dlg.close(); };
-  dlg.addEventListener('close', () => frame.replaceChildren());
+  dlg.addEventListener('close', () => { frame.replaceChildren(); if (!still) heroVideo?.play().catch(() => {}); });
   dlg.addEventListener('click', e => { if (e.target === dlg) close(); });
   document.getElementById('playerClose').addEventListener('click', close);
   document.addEventListener('click', e => {
-    const el = e.target.closest('[data-yt], [data-vimeo]');
+    const el = e.target.closest('[data-yt], [data-vimeo], [data-video]');
     if (el) { e.preventDefault(); open(el); }
   });
 })();

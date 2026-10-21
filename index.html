@@ -9,15 +9,15 @@
 <meta property="og:description" content="Brand, sports partnerships and production across NASCAR, MotoGP, UFC, WWE and MLS.">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://taylorpowers.com">
-<meta property="og:image" content="https://taylorpowers.com/assets/img/ufc-wwe.jpg">
+<meta property="og:image" content="https://taylorpowers.com/assets/img/daytona-race.jpg">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="theme-color" content="#0d0d0d">
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' fill='%23111'/%3E%3Ctext x='32' y='42' font-family='Helvetica,Arial,sans-serif' font-size='26' font-weight='600' text-anchor='middle' fill='%23fff' letter-spacing='-1'%3ETP%3C/text%3E%3C/svg%3E">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@300;400;500;600&display=swap">
-<link rel="preload" as="image" href="assets/img/ufc-wwe.jpg">
-<link rel="stylesheet" href="assets/site.css?v=4">
+<link rel="preload" as="image" href="assets/video/reel-poster.jpg">
+<link rel="stylesheet" href="assets/site.css?v=6">
 </head>
 <body>
 
@@ -32,19 +32,16 @@
 </header>
 
 <main>
-  <!-- Hero: full-bleed slideshow -->
+  <!-- Hero: full-bleed showreel -->
   <section class="hero" aria-label="Introduction">
-    <div class="slides" id="slides">
-      <figure class="slide is-on" data-caption="SuperFile × UFC &amp; WWE"><img src="assets/img/ufc-wwe.jpg" alt=""></figure>
-      <figure class="slide" data-caption="SuperFile × Trackhouse Racing, Daytona 500"><img src="assets/img/daytona-97.jpg" alt=""></figure>
-      <figure class="slide" data-caption="FLEX × LAFC"><img src="assets/img/vm-781610331.jpg" alt=""></figure>
-      <figure class="slide" data-caption="SuperFile"><img src="assets/img/vm-1014838410.jpg" alt=""></figure>
-    </div>
+    <video class="hero-video" id="heroVideo" autoplay muted loop playsinline preload="auto" poster="assets/video/reel-poster.jpg" aria-hidden="true">
+      <source src="assets/video/reel.mp4" type="video/mp4">
+    </video>
     <div class="hero-inner">
       <h1 class="hero-name"><span>Taylor</span> <span>Powers</span></h1>
       <div class="hero-foot">
         <p class="hero-line">Brand, partnerships and production for sports and entertainment.</p>
-        <p class="hero-now"><span id="slideNo">01</span><span class="sep">/</span><span>04</span><span class="cap" id="slideCap">SuperFile × UFC &amp; WWE</span></p>
+        <button type="button" class="hero-play" data-video="assets/video/reel.mp4" data-title="Taylor Powers — Showreel"><span class="dot" aria-hidden="true"></span>Play showreel with sound</button>
       </div>
     </div>
   </section>
@@ -61,7 +58,7 @@
 
     <article class="case case-a">
       <a class="media reveal-img" href="https://speedcafe.com/nascar-news-2026-cup-series-shane-van-gisbergen-daytona-500-livery-svg-trackhouse-superfile/" target="_blank" rel="noopener" data-cursor="View">
-        <img src="assets/img/daytona-97.jpg" alt="SuperFile #97 Chevrolet for Shane van Gisbergen, Trackhouse Racing" loading="lazy">
+        <img src="assets/img/daytona-race.jpg" alt="The SuperFile #97 Chevrolet of Shane van Gisbergen on the banking at the Daytona 500" loading="lazy">
       </a>
       <div class="case-text">
         <span class="no">01</span>
@@ -86,24 +83,24 @@
     <div class="case-pair">
       <article class="case case-c">
         <button class="media reveal-img" type="button" data-yt="JF26n2-jgBI" data-title="SuperFile Trackhouse MotoGP Team" data-cursor="Play">
-          <img src="assets/img/yt-JF26n2-jgBI.jpg" alt="SuperFile Trackhouse MotoGP Team" loading="lazy" class="crop-left">
+          <img src="assets/img/motogp-superfile.jpg" alt="A rider on the SuperFile Trackhouse Aprilia" loading="lazy">
         </button>
         <div class="case-text">
           <span class="no">03</span>
           <h2>SuperFile Trackhouse MotoGP Team</h2>
-          <p>Title partnership on the MotoGP grid, with paddock content, hospitality and partner delivery at every round.</p>
+          <p>From logos on the fairing to the name on the team: title partnership on the MotoGP grid, with paddock content, hospitality and partner delivery at every round.</p>
           <ul class="scope"><li>Title partnership</li><li>Content</li><li>2026</li></ul>
         </div>
       </article>
       <article class="case case-c offset">
-        <button class="media reveal-img" type="button" data-vimeo="1014838410" data-title="SuperFile" data-cursor="Play">
-          <img src="assets/img/vm-1014838410.jpg" alt="SuperFile brand film" loading="lazy">
-        </button>
+        <a class="media reveal-img studio" href="https://www.jayski.com/2026/03/10/shane-van-gisbergen-running-unique-superfile-livery-at-las-vegas-sponsoring-connor-zilisch-at-new-hampshire/" target="_blank" rel="noopener" data-cursor="View">
+          <img src="assets/img/art-car.jpg" alt="The SuperFile #97 art car painted by Mr. Brainwash" loading="lazy">
+        </a>
         <div class="case-text">
           <span class="no">04</span>
-          <h2>SuperFile</h2>
-          <p>Taking a new brand to market: identity, voice, film and the sports program behind it.</p>
-          <ul class="scope"><li>Brand launch</li><li>Film</li><li>2025</li></ul>
+          <h2>SuperFile × Mr. Brainwash</h2>
+          <p>An art car for Las Vegas: the #97 handed to the street artist Mr. Brainwash, turning a race weekend into a culture moment.</p>
+          <ul class="scope"><li>Art car</li><li>Culture</li><li>2026</li></ul>
         </div>
       </article>
     </div>
@@ -122,28 +119,40 @@
 
     <div class="case-pair">
       <article class="case case-c">
+        <button class="media reveal-img" type="button" data-vimeo="1014838410" data-title="SuperFile" data-cursor="Play">
+          <img src="assets/img/vm-1014838410.jpg" alt="SuperFile brand film" loading="lazy">
+        </button>
+        <div class="case-text">
+          <span class="no">06</span>
+          <h2>SuperFile</h2>
+          <p>Taking a new brand to market: identity, voice, film and the sports program behind it.</p>
+          <ul class="scope"><li>Brand launch</li><li>Film</li><li>2025</li></ul>
+        </div>
+      </article>
+      <article class="case case-c offset">
         <button class="media reveal-img" type="button" data-yt="b8bO5EV7JGc" data-title="LAFC — Heart of Gold" data-cursor="Play">
           <img src="assets/img/yt-b8bO5EV7JGc.jpg" alt="Los Angeles firefighters holding LAFC FLEX jerseys" loading="lazy">
         </button>
         <div class="case-text">
-          <span class="no">06</span>
+          <span class="no">07</span>
           <h2>LAFC — Heart of Gold</h2>
           <p>Kit launch film celebrating the city’s first responders.</p>
           <ul class="scope"><li>Kit launch</li><li>Film</li><li>2021</li></ul>
         </div>
       </article>
-      <article class="case case-c offset">
-        <button class="media reveal-img" type="button" data-yt="8U5-WrfmTlE" data-title="SKIL — Don’t Be a Gas Zombie" data-cursor="Play">
-          <img src="assets/img/yt-8U5-WrfmTlE.jpg" alt="SKIL campaign still" loading="lazy">
-        </button>
-        <div class="case-text">
-          <span class="no">07</span>
-          <h2>SKIL — Don’t Be a Gas Zombie</h2>
-          <p>A cordless-power campaign with talent, production and visual effects.</p>
-          <ul class="scope"><li>Campaign</li><li>VFX</li></ul>
-        </div>
-      </article>
     </div>
+
+    <article class="case case-b">
+      <button class="media reveal-img" type="button" data-yt="8U5-WrfmTlE" data-title="SKIL — Don’t Be a Gas Zombie" data-cursor="Play">
+        <img src="assets/img/yt-8U5-WrfmTlE.jpg" alt="SKIL campaign still" loading="lazy">
+      </button>
+      <div class="case-text">
+        <span class="no">08</span>
+        <h2>SKIL — Don’t Be a Gas Zombie</h2>
+        <p>A cordless-power campaign with talent, production and visual effects.</p>
+        <ul class="scope"><li>Campaign</li><li>VFX</li></ul>
+      </div>
+    </article>
   </section>
 
   <!-- Figures -->
@@ -232,6 +241,6 @@
   <div class="player-bar"><span id="playerTitle"></span><button type="button" id="playerClose">Close</button></div>
 </dialog>
 
-<script src="assets/site.js?v=4" defer></script>
+<script src="assets/site.js?v=6" defer></script>
 </body>
 </html>
