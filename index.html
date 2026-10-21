@@ -9,18 +9,19 @@
 <meta property="og:description" content="Brand, sports partnerships and production across NASCAR, MotoGP, UFC, WWE and MLS.">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://taylorpowers.com">
-<meta property="og:image" content="https://taylorpowers.com/assets/img/daytona-97.jpg">
+<meta property="og:image" content="https://taylorpowers.com/assets/img/ufc-wwe.jpg">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="theme-color" content="#ffffff">
+<meta name="theme-color" content="#0d0d0d">
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' fill='%23111'/%3E%3Ctext x='32' y='42' font-family='Helvetica,Arial,sans-serif' font-size='26' font-weight='600' text-anchor='middle' fill='%23fff' letter-spacing='-1'%3ETP%3C/text%3E%3C/svg%3E">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@400;500;600&display=swap">
-<link rel="stylesheet" href="assets/site.css?v=3">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@300;400;500;600&display=swap">
+<link rel="preload" as="image" href="assets/img/ufc-wwe.jpg">
+<link rel="stylesheet" href="assets/site.css?v=4">
 </head>
 <body>
 
-<header class="top wrap">
+<header class="top" id="top">
   <a class="name" href="#">Taylor Powers</a>
   <nav aria-label="Main">
     <a href="#work">Work</a>
@@ -31,120 +32,140 @@
 </header>
 
 <main>
-  <section class="intro wrap">
-    <h1>Brand, partnerships and production for sports and entertainment.</h1>
-    <div class="intro-meta">
-      <p>VP of Brand at SuperFile. Previously Managing Director at Realm Agency, and visual effects at Digital Domain and Wylie Co.</p>
-      <p>Based in Chicago</p>
+  <!-- Hero: full-bleed slideshow -->
+  <section class="hero" aria-label="Introduction">
+    <div class="slides" id="slides">
+      <figure class="slide is-on" data-caption="SuperFile × UFC &amp; WWE"><img src="assets/img/ufc-wwe.jpg" alt=""></figure>
+      <figure class="slide" data-caption="SuperFile × Trackhouse Racing, Daytona 500"><img src="assets/img/daytona-97.jpg" alt=""></figure>
+      <figure class="slide" data-caption="FLEX × LAFC"><img src="assets/img/vm-781610331.jpg" alt=""></figure>
+      <figure class="slide" data-caption="SuperFile"><img src="assets/img/vm-1014838410.jpg" alt=""></figure>
+    </div>
+    <div class="hero-inner">
+      <h1 class="hero-name"><span>Taylor</span> <span>Powers</span></h1>
+      <div class="hero-foot">
+        <p class="hero-line">Brand, partnerships and production for sports and entertainment.</p>
+        <p class="hero-now"><span id="slideNo">01</span><span class="sep">/</span><span>04</span><span class="cap" id="slideCap">SuperFile × UFC &amp; WWE</span></p>
+      </div>
     </div>
   </section>
 
-  <section id="work" class="work wrap" aria-label="Selected work">
-    <figure class="project full">
-      <a class="media" href="https://speedcafe.com/nascar-news-2026-cup-series-shane-van-gisbergen-daytona-500-livery-svg-trackhouse-superfile/" target="_blank" rel="noopener">
-        <img src="assets/img/daytona-97.jpg" alt="SuperFile #97 Chevrolet for Shane van Gisbergen, Trackhouse Racing" fetchpriority="high">
-      </a>
-      <figcaption>
-        <span class="t">SuperFile × Trackhouse Racing</span>
-        <span class="d">NASCAR Cup Series, Daytona 500 · Sponsorship, livery, race-weekend activation</span>
-        <span class="y">2026</span>
-      </figcaption>
-    </figure>
+  <!-- Statement -->
+  <section class="statement wrap">
+    <p class="label">Profile</p>
+    <p class="big">Taylor Powers builds brands in public: on race cars, jerseys, fight nights and broadcast. <span>VP of Brand at SuperFile. Previously Managing Director at Realm Agency, and visual effects on <i>Dune</i> and <i>Doctor Strange</i>.</span></p>
+  </section>
 
-    <figure class="project">
-      <a class="media" href="https://www.ufc.com/news/tko-and-superfile-announce-global-partnership-across-ufc-and-wwe" target="_blank" rel="noopener">
+  <!-- Work -->
+  <section id="work" class="work wrap" aria-label="Selected work">
+    <div class="section-head"><p class="label">Selected work</p><p class="label">2020 — 2026</p></div>
+
+    <article class="case case-a">
+      <a class="media reveal-img" href="https://speedcafe.com/nascar-news-2026-cup-series-shane-van-gisbergen-daytona-500-livery-svg-trackhouse-superfile/" target="_blank" rel="noopener" data-cursor="View">
+        <img src="assets/img/daytona-97.jpg" alt="SuperFile #97 Chevrolet for Shane van Gisbergen, Trackhouse Racing" loading="lazy">
+      </a>
+      <div class="case-text">
+        <span class="no">01</span>
+        <h2>SuperFile × Trackhouse Racing</h2>
+        <p>The black-and-volt #97 for Shane van Gisbergen at the Daytona 500, opening a multi-year NASCAR program built around race-weekend activation and VIP hospitality.</p>
+        <ul class="scope"><li>Sponsorship</li><li>Livery</li><li>Activation</li><li>2026</li></ul>
+      </div>
+    </article>
+
+    <article class="case case-b">
+      <a class="media reveal-img" href="https://www.ufc.com/news/tko-and-superfile-announce-global-partnership-across-ufc-and-wwe" target="_blank" rel="noopener" data-cursor="View">
         <img src="assets/img/ufc-wwe.jpg" alt="SuperFile branding on a UFC glove" loading="lazy">
       </a>
-      <figcaption>
-        <span class="t">SuperFile × UFC &amp; WWE</span>
-        <span class="d">Global partnership with TKO · Fight-night and live-event activation</span>
-        <span class="y">2026</span>
-      </figcaption>
-    </figure>
+      <div class="case-text">
+        <span class="no">02</span>
+        <h2>SuperFile × UFC &amp; WWE</h2>
+        <p>A global partnership with TKO, making SuperFile the first Official Secure File Sharing Partner of both UFC and WWE, activated across fight nights and live events.</p>
+        <ul class="scope"><li>Partnership</li><li>Live events</li><li>2026</li></ul>
+      </div>
+    </article>
 
-    <figure class="project">
-      <button class="media" type="button" data-yt="JF26n2-jgBI" data-title="SuperFile Trackhouse MotoGP Team">
-        <img src="assets/img/yt-JF26n2-jgBI.jpg" alt="SuperFile Trackhouse MotoGP Team" loading="lazy" style="object-position: 0% 50%; width: 150%; max-width: none">
-        <span class="watch">Watch</span>
-      </button>
-      <figcaption>
-        <span class="t">SuperFile Trackhouse MotoGP Team</span>
-        <span class="d">Title partnership · Content, hospitality, partner delivery</span>
-        <span class="y">2026</span>
-      </figcaption>
-    </figure>
-
-    <figure class="project">
-      <button class="media" type="button" data-vimeo="1014838410" data-title="SuperFile">
-        <img src="assets/img/vm-1014838410.jpg" alt="SuperFile brand film" loading="lazy">
-        <span class="watch">Watch</span>
-      </button>
-      <figcaption>
-        <span class="t">SuperFile</span>
-        <span class="d">Brand launch · Identity, film, content</span>
-        <span class="y">2025</span>
-      </figcaption>
-    </figure>
-
-    <figure class="project">
-      <button class="media" type="button" data-vimeo="781610331" data-title="FLEX × LAFC">
-        <img src="assets/img/vm-781610331.jpg" alt="LAFC jersey with FLEX Power Tools on the front" loading="lazy">
-        <span class="watch">Watch</span>
-      </button>
-      <figcaption>
-        <span class="t">FLEX × LAFC</span>
-        <span class="d">MLS front-of-jersey partnership · Strategy, activation, content</span>
-        <span class="y">2021–2023</span>
-      </figcaption>
-    </figure>
-
-    <figure class="project">
-      <button class="media" type="button" data-yt="b8bO5EV7JGc" data-title="LAFC — Heart of Gold">
-        <img src="assets/img/yt-b8bO5EV7JGc.jpg" alt="Los Angeles firefighters holding LAFC FLEX jerseys" loading="lazy">
-        <span class="watch">Watch</span>
-      </button>
-      <figcaption>
-        <span class="t">LAFC — Heart of Gold</span>
-        <span class="d">Kit launch · Film</span>
-        <span class="y">2021</span>
-      </figcaption>
-    </figure>
-
-    <figure class="project">
-      <button class="media" type="button" data-yt="8U5-WrfmTlE" data-title="SKIL — Don’t Be a Gas Zombie">
-        <img src="assets/img/yt-8U5-WrfmTlE.jpg" alt="SKIL campaign still" loading="lazy">
-        <span class="watch">Watch</span>
-      </button>
-      <figcaption>
-        <span class="t">SKIL — Don’t Be a Gas Zombie</span>
-        <span class="d">Campaign · Talent, production, VFX</span>
-        <span class="y">Realm</span>
-      </figcaption>
-    </figure>
-  </section>
-
-  <section class="clients wrap" aria-label="Clients and properties">
-    <h2 class="label">Clients &amp; properties</h2>
-    <ul>
-      <li>SuperFile</li><li>NASCAR</li><li>Trackhouse Racing</li><li>MotoGP</li><li>UFC</li><li>WWE</li><li>MLS</li><li>LAFC</li><li>FLEX</li><li>EGO</li><li>SKIL</li><li>Warner Bros.</li><li>Marvel Studios</li><li>Apple TV+</li>
-    </ul>
-  </section>
-
-  <section id="about" class="about wrap">
-    <h2 class="label">About</h2>
-    <div class="about-body">
-      <p class="lead">Taylor Powers builds brands in public: on race cars, jerseys, fight nights and broadcast.</p>
-      <p>As VP of Brand at SuperFile, Taylor took the company to market and built its sports and entertainment program, with Trackhouse Racing in NASCAR and MotoGP and a global partnership with UFC and WWE, managing more than $20 million in production. Before that, as Managing Director and Partner at Realm Agency, Taylor ran operations and production for clients including FLEX, EGO and SKIL, and activated FLEX’s front-of-jersey sponsorship with LAFC.</p>
-      <p>Taylor began in feature-film visual effects at Wylie Co. and in Digital Domain’s Digital Human Group, on titles including <i>Dune</i> and <i>Doctor Strange in the Multiverse of Madness</i>. That discipline of schedules, pipelines and final delivery still runs every project.</p>
+    <div class="case-pair">
+      <article class="case case-c">
+        <button class="media reveal-img" type="button" data-yt="JF26n2-jgBI" data-title="SuperFile Trackhouse MotoGP Team" data-cursor="Play">
+          <img src="assets/img/yt-JF26n2-jgBI.jpg" alt="SuperFile Trackhouse MotoGP Team" loading="lazy" class="crop-left">
+        </button>
+        <div class="case-text">
+          <span class="no">03</span>
+          <h2>SuperFile Trackhouse MotoGP Team</h2>
+          <p>Title partnership on the MotoGP grid, with paddock content, hospitality and partner delivery at every round.</p>
+          <ul class="scope"><li>Title partnership</li><li>Content</li><li>2026</li></ul>
+        </div>
+      </article>
+      <article class="case case-c offset">
+        <button class="media reveal-img" type="button" data-vimeo="1014838410" data-title="SuperFile" data-cursor="Play">
+          <img src="assets/img/vm-1014838410.jpg" alt="SuperFile brand film" loading="lazy">
+        </button>
+        <div class="case-text">
+          <span class="no">04</span>
+          <h2>SuperFile</h2>
+          <p>Taking a new brand to market: identity, voice, film and the sports program behind it.</p>
+          <ul class="scope"><li>Brand launch</li><li>Film</li><li>2025</li></ul>
+        </div>
+      </article>
     </div>
-    <dl class="figures">
+
+    <article class="case case-wide">
+      <button class="media reveal-img" type="button" data-vimeo="781610331" data-title="FLEX × LAFC" data-cursor="Play">
+        <img src="assets/img/vm-781610331.jpg" alt="LAFC jersey with FLEX Power Tools on the front" loading="lazy">
+      </button>
+      <div class="case-text row">
+        <span class="no">05</span>
+        <h2>FLEX × LAFC</h2>
+        <p>Strategy, activation and content for FLEX’s front-of-jersey partnership with Los Angeles FC in Major League Soccer.</p>
+        <ul class="scope"><li>MLS</li><li>Jersey partnership</li><li>2021 — 2023</li></ul>
+      </div>
+    </article>
+
+    <div class="case-pair">
+      <article class="case case-c">
+        <button class="media reveal-img" type="button" data-yt="b8bO5EV7JGc" data-title="LAFC — Heart of Gold" data-cursor="Play">
+          <img src="assets/img/yt-b8bO5EV7JGc.jpg" alt="Los Angeles firefighters holding LAFC FLEX jerseys" loading="lazy">
+        </button>
+        <div class="case-text">
+          <span class="no">06</span>
+          <h2>LAFC — Heart of Gold</h2>
+          <p>Kit launch film celebrating the city’s first responders.</p>
+          <ul class="scope"><li>Kit launch</li><li>Film</li><li>2021</li></ul>
+        </div>
+      </article>
+      <article class="case case-c offset">
+        <button class="media reveal-img" type="button" data-yt="8U5-WrfmTlE" data-title="SKIL — Don’t Be a Gas Zombie" data-cursor="Play">
+          <img src="assets/img/yt-8U5-WrfmTlE.jpg" alt="SKIL campaign still" loading="lazy">
+        </button>
+        <div class="case-text">
+          <span class="no">07</span>
+          <h2>SKIL — Don’t Be a Gas Zombie</h2>
+          <p>A cordless-power campaign with talent, production and visual effects.</p>
+          <ul class="scope"><li>Campaign</li><li>VFX</li></ul>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <!-- Figures -->
+  <section class="figures-band" aria-label="Highlights">
+    <dl class="figures wrap">
       <div><dt>$20M+</dt><dd>Production managed at SuperFile</dd></div>
       <div><dt>40B+</dt><dd>Impressions for FLEX campaigns</dd></div>
       <div><dt>5,000+</dt><dd>Creative and sponsorship assets delivered</dd></div>
       <div><dt>25+</dt><dd>Largest team led</dd></div>
     </dl>
+  </section>
+
+  <!-- About -->
+  <section id="about" class="about wrap">
+    <p class="label">About</p>
+    <div class="about-body">
+      <p>As VP of Brand at SuperFile, Taylor took the company to market and built its sports and entertainment program, with Trackhouse Racing in NASCAR and MotoGP and a global partnership with UFC and WWE, managing more than $20 million in production.</p>
+      <p>Before that, as Managing Director and Partner at Realm Agency, Taylor ran operations and production for clients including FLEX, EGO and SKIL, and activated FLEX’s front-of-jersey sponsorship with LAFC.</p>
+      <p>Taylor began in feature-film visual effects at Wylie Co. and in Digital Domain’s Digital Human Group. That discipline of schedules, pipelines and final delivery still runs every project.</p>
+    </div>
     <div class="capabilities">
-      <h3 class="label">Capabilities</h3>
+      <p class="label">Capabilities</p>
       <ul>
         <li>VP of Brand</li>
         <li>Brand Management</li>
@@ -156,20 +177,29 @@
     </div>
   </section>
 
+  <!-- Clients -->
+  <section class="clients wrap" aria-label="Clients and properties">
+    <p class="label">Clients &amp; properties</p>
+    <ul>
+      <li>SuperFile</li><li>NASCAR</li><li>Trackhouse Racing</li><li>MotoGP</li><li>UFC</li><li>WWE</li><li>MLS</li><li>LAFC</li><li>FLEX</li><li>EGO</li><li>SKIL</li><li>Warner Bros.</li><li>Marvel Studios</li><li>Apple TV+</li>
+    </ul>
+  </section>
+
+  <!-- Experience -->
   <section id="experience" class="experience wrap">
-    <h2 class="label">Experience</h2>
+    <p class="label">Experience</p>
     <ol class="rows">
-      <li><span class="when">2025–2026</span><span class="org">SuperFile</span><span class="role">VP of Brand</span></li>
-      <li><span class="when">2024–2025</span><span class="org">Realm Agency</span><span class="role">Managing Director / Partner</span></li>
-      <li><span class="when">2021–2024</span><span class="org">Realm Agency</span><span class="role">Senior Account Director, Account Director, Account Executive</span></li>
-      <li><span class="when">2020–2021</span><span class="org">Digital Domain</span><span class="role">Visual Effects, Digital Human Group</span></li>
-      <li><span class="when">2017–2020</span><span class="org">Wylie Co.</span><span class="role">Visual Effects</span></li>
+      <li><span class="when">2025 — 2026</span><span class="org">SuperFile</span><span class="role">VP of Brand</span></li>
+      <li><span class="when">2024 — 2025</span><span class="org">Realm Agency</span><span class="role">Managing Director / Partner</span></li>
+      <li><span class="when">2021 — 2024</span><span class="org">Realm Agency</span><span class="role">Senior Account Director, Account Director, Account Executive</span></li>
+      <li><span class="when">2020 — 2021</span><span class="org">Digital Domain</span><span class="role">Visual Effects, Digital Human Group</span></li>
+      <li><span class="when">2017 — 2020</span><span class="org">Wylie Co.</span><span class="role">Visual Effects</span></li>
       <li><span class="when">2019</span><span class="org">University of Central Florida</span><span class="role">B.S., Pre-Med</span></li>
     </ol>
   </section>
 
-  <section class="film wrap" aria-label="Film and VFX credits">
-    <h2 class="label">Film &amp; visual effects</h2>
+  <section class="film wrap" aria-label="Film and visual effects">
+    <p class="label">Film &amp; visual effects</p>
     <ol class="rows credits">
       <li><span class="org"><i>Dune</i></span><span class="role">Warner Bros. / Legendary</span><button type="button" class="link" data-yt="8g18jFHCLXk" data-title="Dune — Trailer">Trailer</button></li>
       <li><span class="org"><i>Doctor Strange in the Multiverse of Madness</i></span><span class="role">Marvel Studios</span><button type="button" class="link" data-yt="aWzlQ2N6qqg" data-title="Doctor Strange in the Multiverse of Madness — Trailer">Trailer</button></li>
@@ -179,23 +209,29 @@
     </ol>
   </section>
 
+  <!-- Contact -->
   <section id="contact" class="contact wrap">
-    <h2 class="label">Contact</h2>
-    <a class="email" href="mailto:taylor@taylorpowers.com">taylor@taylorpowers.com</a>
-    <p class="social"><a href="https://www.linkedin.com/in/taylorpowers2026" target="_blank" rel="noopener">LinkedIn</a></p>
+    <p class="label">Contact</p>
+    <div class="contact-body">
+      <p class="contact-line">For partnerships, brand leadership and production.</p>
+      <a class="email" href="mailto:taylor@taylorpowers.com">taylor@taylorpowers.com</a>
+      <p class="social"><a href="https://www.linkedin.com/in/taylorpowers2026" target="_blank" rel="noopener">LinkedIn</a><span>Chicago</span></p>
+    </div>
   </section>
 </main>
 
-<footer class="foot wrap">
-  <span>© 2026 Taylor Powers</span>
-  <span>Chicago</span>
+<footer class="foot">
+  <p class="wordmark" aria-hidden="true">Taylor Powers</p>
+  <div class="foot-row wrap"><span>© 2026 Taylor Powers</span><a href="#">Back to top</a></div>
 </footer>
+
+<div class="cursor" id="cursor" aria-hidden="true"><span></span></div>
 
 <dialog class="player" id="player" aria-label="Video">
   <div class="frame" id="playerFrame"></div>
   <div class="player-bar"><span id="playerTitle"></span><button type="button" id="playerClose">Close</button></div>
 </dialog>
 
-<script src="assets/site.js?v=3" defer></script>
+<script src="assets/site.js?v=4" defer></script>
 </body>
 </html>

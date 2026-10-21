@@ -1,9 +1,57 @@
-// Video lightbox for [data-yt] / [data-vimeo] buttons, plus a quiet fade-in on scroll.
+// Hero slideshow, header state, scroll reveals, cursor label and the video lightbox.
 (() => {
+  const still = matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+  // Hero slideshow
+  const slides = [...document.querySelectorAll('.slide')];
+  const no = document.getElementById('slideNo');
+  const cap = document.getElementById('slideCap');
+  let cur = 0;
+  if (slides.length > 1 && !still) setInterval(() => {
+    slides[cur].classList.remove('is-on');
+    cur = (cur + 1) % slides.length;
+    slides[cur].classList.add('is-on');
+    no.textContent = String(cur + 1).padStart(2, '0');
+    cap.style.opacity = 0;
+    setTimeout(() => { cap.textContent = slides[cur].dataset.caption; cap.style.opacity = 1; }, 400);
+  }, 5200);
+
+  // Header turns dark once past the hero
+  const top = document.getElementById('top');
+  const hero = document.querySelector('.hero');
+  const onScroll = () => top.classList.toggle('on-page', scrollY > hero.offsetHeight - 80);
+  addEventListener('scroll', onScroll, { passive: true }); onScroll();
+
+  // Reveals
+  if ('IntersectionObserver' in window) {
+    document.documentElement.classList.add('js');
+    document.querySelectorAll('.case-text, .statement, .figures div, .about-body, .capabilities, .clients ul, .rows li, .contact-body')
+      .forEach(el => el.classList.add('fade'));
+    const io = new IntersectionObserver(entries => entries.forEach(en => {
+      if (en.isIntersecting) { en.target.classList.add('in'); io.unobserve(en.target); }
+    }), { rootMargin: '0px 0px -10% 0px' });
+    document.querySelectorAll('.reveal-img, .fade').forEach(el => io.observe(el));
+    document.querySelectorAll('.figures div, .rows li').forEach((el, i) => { el.style.transitionDelay = `${(i % 6) * 60}ms`; });
+  }
+
+  // Cursor label over work
+  const cursor = document.getElementById('cursor');
+  const label = cursor.querySelector('span');
+  if (matchMedia('(hover: hover) and (pointer: fine)').matches) {
+    let x = -100, y = -100, cx = x, cy = y;
+    addEventListener('pointermove', e => { x = e.clientX; y = e.clientY; }, { passive: true });
+    const loop = () => { cx += (x - cx) * .2; cy += (y - cy) * .2; cursor.style.transform = `translate3d(${cx}px, ${cy}px, 0)`; requestAnimationFrame(loop); };
+    loop();
+    document.querySelectorAll('[data-cursor]').forEach(el => {
+      el.addEventListener('pointerenter', () => { label.textContent = el.dataset.cursor; cursor.classList.add('show'); });
+      el.addEventListener('pointerleave', () => cursor.classList.remove('show'));
+    });
+  }
+
+  // Video lightbox
   const dlg = document.getElementById('player');
   const frame = document.getElementById('playerFrame');
   const title = document.getElementById('playerTitle');
-
   function open(el) {
     const src = el.dataset.yt
       ? `https://www.youtube-nocookie.com/embed/${el.dataset.yt}?autoplay=1&rel=0&modestbranding=1`
@@ -14,6 +62,7 @@
     f.allow = 'autoplay; fullscreen; picture-in-picture; encrypted-media'; f.allowFullscreen = true;
     frame.replaceChildren(f);
     title.textContent = el.dataset.title || '';
+    cursor.classList.remove('show');
     dlg.showModal();
   }
   const close = () => { if (dlg.open) dlg.close(); };
@@ -24,11 +73,4 @@
     const el = e.target.closest('[data-yt], [data-vimeo]');
     if (el) { e.preventDefault(); open(el); }
   });
-
-  if (!('IntersectionObserver' in window)) return;
-  document.documentElement.classList.add('js');
-  const io = new IntersectionObserver(entries => entries.forEach(en => {
-    if (en.isIntersecting) { en.target.classList.add('in'); io.unobserve(en.target); }
-  }), { rootMargin: '0px 0px -8% 0px' });
-  document.querySelectorAll('.project, .clients, .about, .experience, .film, .contact').forEach(el => io.observe(el));
 })();
