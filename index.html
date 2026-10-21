@@ -17,12 +17,12 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@300;400;500;600&display=swap">
 <link rel="preload" as="image" href="assets/video/reel-poster.jpg">
-<link rel="stylesheet" href="assets/site.css?v=6">
+<link rel="stylesheet" href="assets/site.css?v=7">
 </head>
 <body>
 
 <header class="top" id="top">
-  <a class="name" href="#">Taylor Powers</a>
+  <a class="name" href="#reel">Taylor Powers</a>
   <nav aria-label="Main">
     <a href="#work">Work</a>
     <a href="#about">About</a>
@@ -32,14 +32,28 @@
 </header>
 
 <main>
-  <!-- Hero: full-bleed showreel -->
-  <section class="hero" aria-label="Introduction">
-    <video class="hero-video" id="heroVideo" autoplay muted loop playsinline preload="auto" poster="assets/video/reel-poster.jpg" aria-hidden="true">
-      <source src="assets/video/reel.mp4" type="video/mp4">
-    </video>
-    <div class="hero-inner">
-      <h1 class="hero-name"><span>Taylor</span> <span>Powers</span></h1>
-      <div class="hero-foot">
+  <!-- Hero: the showreel plays inside the name, then the letters zoom open into full screen -->
+  <section class="reel" id="reel" aria-label="Introduction">
+    <div class="reel-stage">
+      <video class="reel-video" id="heroVideo" autoplay muted loop playsinline preload="auto" poster="assets/video/reel-poster.jpg" aria-hidden="true">
+        <source src="assets/video/reel.mp4" type="video/mp4">
+      </video>
+      <svg class="reel-mask" id="reelMask" aria-hidden="true">
+        <defs>
+          <mask id="nameMask" maskUnits="userSpaceOnUse" x="0" y="0" width="100%" height="100%">
+            <rect width="100%" height="100%" fill="#fff"/>
+            <text class="mask-text" text-anchor="middle" fill="#000"><tspan class="l1">Taylor</tspan><tspan class="l2">Powers</tspan></text>
+          </mask>
+        </defs>
+        <rect width="100%" height="100%" fill="#fff" mask="url(#nameMask)"/>
+        <text class="mask-text measure" text-anchor="middle" fill="none"><tspan class="l1">Taylor</tspan><tspan class="l2">Powers</tspan></text>
+      </svg>
+      <h1 class="sr-only">Taylor Powers</h1>
+      <div class="reel-intro" id="reelIntro">
+        <p>Brand, partnerships and production for sports and entertainment.</p>
+        <span class="scroll-cue">Scroll</span>
+      </div>
+      <div class="reel-foot" id="reelFoot">
         <p class="hero-line">Brand, partnerships and production for sports and entertainment.</p>
         <button type="button" class="hero-play" data-video="assets/video/reel.mp4" data-title="Taylor Powers — Showreel"><span class="dot" aria-hidden="true"></span>Play showreel with sound</button>
       </div>
@@ -56,7 +70,7 @@
   <section id="work" class="work wrap" aria-label="Selected work">
     <div class="section-head"><p class="label">Selected work</p><p class="label">2020 — 2026</p></div>
 
-    <article class="case case-a">
+    <article id="case-01" class="case case-a">
       <a class="media reveal-img" href="https://speedcafe.com/nascar-news-2026-cup-series-shane-van-gisbergen-daytona-500-livery-svg-trackhouse-superfile/" target="_blank" rel="noopener" data-cursor="View">
         <img src="assets/img/daytona-race.jpg" alt="The SuperFile #97 Chevrolet of Shane van Gisbergen on the banking at the Daytona 500" loading="lazy">
       </a>
@@ -68,7 +82,7 @@
       </div>
     </article>
 
-    <article class="case case-b">
+    <article id="case-02" class="case case-b">
       <a class="media reveal-img" href="https://www.ufc.com/news/tko-and-superfile-announce-global-partnership-across-ufc-and-wwe" target="_blank" rel="noopener" data-cursor="View">
         <img src="assets/img/ufc-wwe.jpg" alt="SuperFile branding on a UFC glove" loading="lazy">
       </a>
@@ -81,7 +95,7 @@
     </article>
 
     <div class="case-pair">
-      <article class="case case-c">
+      <article id="case-03" class="case case-c">
         <button class="media reveal-img" type="button" data-yt="JF26n2-jgBI" data-title="SuperFile Trackhouse MotoGP Team" data-cursor="Play">
           <img src="assets/img/motogp-superfile.jpg" alt="A rider on the SuperFile Trackhouse Aprilia" loading="lazy">
         </button>
@@ -92,7 +106,7 @@
           <ul class="scope"><li>Title partnership</li><li>Content</li><li>2026</li></ul>
         </div>
       </article>
-      <article class="case case-c offset">
+      <article id="case-04" class="case case-c offset">
         <a class="media reveal-img studio" href="https://www.jayski.com/2026/03/10/shane-van-gisbergen-running-unique-superfile-livery-at-las-vegas-sponsoring-connor-zilisch-at-new-hampshire/" target="_blank" rel="noopener" data-cursor="View">
           <img src="assets/img/art-car.jpg" alt="The SuperFile #97 art car painted by Mr. Brainwash" loading="lazy">
         </a>
@@ -105,7 +119,7 @@
       </article>
     </div>
 
-    <article class="case case-wide">
+    <article id="case-05" class="case case-wide">
       <button class="media reveal-img" type="button" data-vimeo="781610331" data-title="FLEX × LAFC" data-cursor="Play">
         <img src="assets/img/vm-781610331.jpg" alt="LAFC jersey with FLEX Power Tools on the front" loading="lazy">
       </button>
@@ -118,7 +132,7 @@
     </article>
 
     <div class="case-pair">
-      <article class="case case-c">
+      <article id="case-06" class="case case-c">
         <button class="media reveal-img" type="button" data-vimeo="1014838410" data-title="SuperFile" data-cursor="Play">
           <img src="assets/img/vm-1014838410.jpg" alt="SuperFile brand film" loading="lazy">
         </button>
@@ -129,7 +143,7 @@
           <ul class="scope"><li>Brand launch</li><li>Film</li><li>2025</li></ul>
         </div>
       </article>
-      <article class="case case-c offset">
+      <article id="case-07" class="case case-c offset">
         <button class="media reveal-img" type="button" data-yt="b8bO5EV7JGc" data-title="LAFC — Heart of Gold" data-cursor="Play">
           <img src="assets/img/yt-b8bO5EV7JGc.jpg" alt="Los Angeles firefighters holding LAFC FLEX jerseys" loading="lazy">
         </button>
@@ -142,7 +156,7 @@
       </article>
     </div>
 
-    <article class="case case-b">
+    <article id="case-08" class="case case-b">
       <button class="media reveal-img" type="button" data-yt="8U5-WrfmTlE" data-title="SKIL — Don’t Be a Gas Zombie" data-cursor="Play">
         <img src="assets/img/yt-8U5-WrfmTlE.jpg" alt="SKIL campaign still" loading="lazy">
       </button>
@@ -153,6 +167,21 @@
         <ul class="scope"><li>Campaign</li><li>VFX</li></ul>
       </div>
     </article>
+  </section>
+
+  <!-- Index -->
+  <section class="index wrap" aria-label="Project index">
+    <div class="section-head"><p class="label">Index</p><p class="label">08 projects</p></div>
+    <ol class="index-list" id="indexList">
+      <li><a href="#case-01" data-img="assets/img/daytona-race.jpg"><span class="i-no">01</span><span class="i-t">SuperFile × Trackhouse Racing</span><span class="i-c">NASCAR · Sponsorship</span><span class="i-y">2026</span></a></li>
+      <li><a href="#case-02" data-img="assets/img/ufc-wwe.jpg"><span class="i-no">02</span><span class="i-t">SuperFile × UFC &amp; WWE</span><span class="i-c">TKO · Partnership</span><span class="i-y">2026</span></a></li>
+      <li><a href="#case-03" data-img="assets/img/motogp-superfile.jpg"><span class="i-no">03</span><span class="i-t">SuperFile Trackhouse MotoGP Team</span><span class="i-c">MotoGP · Title partnership</span><span class="i-y">2026</span></a></li>
+      <li><a href="#case-04" data-img="assets/img/art-car.jpg"><span class="i-no">04</span><span class="i-t">SuperFile × Mr. Brainwash</span><span class="i-c">NASCAR · Art car</span><span class="i-y">2026</span></a></li>
+      <li><a href="#case-05" data-img="assets/img/vm-781610331.jpg"><span class="i-no">05</span><span class="i-t">FLEX × LAFC</span><span class="i-c">MLS · Jersey partnership</span><span class="i-y">2021 — 23</span></a></li>
+      <li><a href="#case-06" data-img="assets/img/vm-1014838410.jpg"><span class="i-no">06</span><span class="i-t">SuperFile</span><span class="i-c">Brand launch</span><span class="i-y">2025</span></a></li>
+      <li><a href="#case-07" data-img="assets/img/yt-b8bO5EV7JGc.jpg"><span class="i-no">07</span><span class="i-t">LAFC — Heart of Gold</span><span class="i-c">Kit launch film</span><span class="i-y">2021</span></a></li>
+      <li><a href="#case-08" data-img="assets/img/yt-8U5-WrfmTlE.jpg"><span class="i-no">08</span><span class="i-t">SKIL — Don’t Be a Gas Zombie</span><span class="i-c">Campaign</span><span class="i-y">Realm</span></a></li>
+    </ol>
   </section>
 
   <!-- Figures -->
@@ -231,16 +260,18 @@
 
 <footer class="foot">
   <p class="wordmark" aria-hidden="true">Taylor Powers</p>
-  <div class="foot-row wrap"><span>© 2026 Taylor Powers</span><a href="#">Back to top</a></div>
+  <div class="foot-row wrap"><span>© 2026 Taylor Powers</span><span>Chicago <time id="clock"></time></span><a href="#reel">Back to top</a></div>
 </footer>
 
 <div class="cursor" id="cursor" aria-hidden="true"><span></span></div>
+<div class="preview" id="preview" aria-hidden="true"><img alt=""></div>
 
 <dialog class="player" id="player" aria-label="Video">
   <div class="frame" id="playerFrame"></div>
   <div class="player-bar"><span id="playerTitle"></span><button type="button" id="playerClose">Close</button></div>
 </dialog>
 
-<script src="assets/site.js?v=6" defer></script>
+<script src="https://cdn.jsdelivr.net/npm/lenis@1.1.13/dist/lenis.min.js" defer></script>
+<script src="assets/site.js?v=7" defer></script>
 </body>
 </html>
