@@ -42,6 +42,22 @@
   // Case-page hero video
   document.querySelectorAll('.case-hero video').forEach(v => { v.dataset.auto = '1'; vis.observe(v); if (still) v.pause(); });
 
+  // Case-page HD heroes: Vimeo background players fade in once they report playing
+  const hd = document.querySelector('.case-hero-vimeo');
+  if (hd && !still) {
+    addEventListener('message', ev => {
+      if (!/vimeo\.com$/.test(new URL(ev.origin).hostname)) return;
+      let d = ev.data; try { if (typeof d === 'string') d = JSON.parse(d); } catch (_) { return; }
+      if (d && (d.event === 'play' || d.event === 'playProgress' || d.event === 'timeupdate')) {
+        hd.classList.add('on');
+        document.querySelector('.case-hero video')?.pause();
+      }
+    });
+    hd.addEventListener('load', () => {
+      ['play', 'playProgress', 'timeupdate'].forEach(n => hd.contentWindow.postMessage(JSON.stringify({ method: 'addEventListener', value: n }), '*'));
+    });
+  } else if (hd) hd.remove();
+
   // Work clips: preview on hover (desktop), or when centered (touch); the file loads on first use
   function startClip(m) {
     const v = m && m.querySelector('video'); if (!v || still) return;

@@ -8,7 +8,7 @@ public coverage; don't add claims that aren't in either.
 import html, os, pathlib
 
 ROOT = pathlib.Path(__file__).resolve().parent.parent
-V = "13"  # bump with ?v= in index.html when CSS/JS change
+V = "14"  # bump with ?v= in index.html when CSS/JS change
 
 PROJECTS = [
     dict(slug="superfile-trackhouse-nascar", client="SuperFile × Trackhouse Racing", title="Daytona 500",
@@ -21,12 +21,12 @@ PROJECTS = [
          gallery=["/assets/img/daytona-race.jpg", "/assets/img/art-car.jpg"]),
     dict(slug="flex-lafc", client="FLEX × LAFC", title="Front of the jersey",
          year="2021 — 2023", role="Account Director → Senior Account Director, Realm Agency", disciplines=["Jersey sponsorship", "Campaign development", "Partner relations", "Experiential"],
-         hero_clip="/assets/clips/flex-falcon.mp4", hero_img="/assets/clips/flex-falcon.jpg",
+         hero_clip="/assets/clips/flex-falcon.mp4", hero_img="/assets/clips/flex-falcon.jpg", hero_vimeo="781610331",
          lead="FLEX Power Tools on the front of Los Angeles FC’s jersey, and a campaign big enough to match.",
          body=["Taylor worked across FLEX’s LAFC front-of-jersey sponsorship, from campaign development and partner relations to experiential activations.",
                "The program reached more than 60 billion impressions."],
          figures=[("60B+", "Impressions")], film=dict(vimeo="781610331", title="FLEX × LAFC"),
-         gallery=["/assets/clips/flex-falcon.jpg", "/assets/clips/flex-soccer.jpg"]),
+         gallery=["/assets/img/flex-lafc-welcome.jpg", "/assets/clips/flex-soccer.jpg"]),
     dict(slug="superfile-ufc-wwe", client="SuperFile × UFC & WWE", title="Fight night, worldwide",
          year="2026", role="VP of Brand, SuperFile", disciplines=["Global partnership", "Live events", "Brand integration"],
          hero_img="/assets/img/ufc-wwe.jpg",
@@ -62,7 +62,7 @@ PROJECTS = [
          gallery=[]),
     dict(slug="superfile-brand-launch", client="SuperFile", title="Brand launch",
          year="2025 — 2026", role="VP of Brand, SuperFile", disciplines=["Brand development", "Integrated marketing", "Content", "Social"],
-         hero_img="/assets/img/vm-1014838410.jpg",
+         hero_img="/assets/img/vm-1014838410.jpg", hero_vimeo="1014838410",
          lead="Taking a new brand to market across brand, creative, content, production and partnerships.",
          body=["Taylor launched SuperFile’s brand, building and leading a 25+ person department across brand, strategy, creative, partnerships and production, and aligning marketing, product and sales on go-to-market.",
                "On social, Taylor launched and scaled SuperFile’s Instagram to more than 150,000 followers in eight months, averaging 18,000+ new followers a month."],
@@ -81,6 +81,9 @@ def page(p, nxt):
     hero = (f'<video class="case-hero-media" autoplay muted loop playsinline poster="{p["hero_img"]}" aria-hidden="true"><source src="{p["hero_clip"]}" type="video/mp4"></video>'
             if p.get("hero_clip") else
             f'<img class="case-hero-media{" light" if p.get("hero_light") else ""}" src="{p["hero_img"]}" alt="{e(p["client"])}">')
+    if p.get("hero_vimeo"):
+        hero += (f'<iframe class="case-hero-vimeo" data-hd src="https://player.vimeo.com/video/{p["hero_vimeo"]}?background=1&autoplay=1&loop=1&muted=1&dnt=1" '
+                 f'allow="autoplay; fullscreen; picture-in-picture" title="{e(p["client"])}" aria-hidden="true" tabindex="-1"></iframe>')
     actions = []
     if p.get("film"):
         actions.append(f'<button type="button" class="chip-btn solid" {film_attrs(p["film"])} data-title="{e(p["film"]["title"])}">Watch the film</button>')

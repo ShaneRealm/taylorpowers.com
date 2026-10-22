@@ -177,7 +177,9 @@ button { font: inherit; color: inherit; background: none; border: 0; padding: 0;
 .case-hero { position: relative; height: 82vh; height: 82svh; min-height: 480px; overflow: hidden; background: #000; }
 .case-hero-media { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
 .case-hero-media.light { object-fit: contain; background: #fff; padding: 9vh 10vw 30vh; }
-.light-hero .case-hero-shade { background: linear-gradient(180deg, rgba(0,0,0,0) 60%, #0a0a0a 76%); }
+.light-hero .case-hero-vimeo { position: absolute; top: 50%; left: 50%; width: max(100%, 177.78vh); height: max(100%, 56.25vw); transform: translate(-50%, -50%); border: 0; pointer-events: none; opacity: 0; transition: opacity .8s ease; }
+.case-hero-vimeo.on { opacity: 1; }
+.case-hero-shade { background: linear-gradient(180deg, rgba(0,0,0,0) 60%, #0a0a0a 76%); }
 .case-hero-shade { position: absolute; inset: 0; background: linear-gradient(180deg, rgba(0,0,0,.4), rgba(0,0,0,0) 30%, rgba(0,0,0,0) 50%, rgba(0,0,0,.8)); }
 .case-hero-copy { position: absolute; left: var(--g); right: var(--g); bottom: 36px; }
 .case-hero .display { font-size: clamp(56px, 10vw, 180px); }

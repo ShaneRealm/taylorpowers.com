@@ -3,7 +3,7 @@
 Site for Taylor Powers, brand and creative production executive: VP of Brand, brand management, managing director, account director, production and visual effects. It's a static site served by GitHub Pages at https://taylorpowers.com, and pushing to `main` deploys it.
 
 - `index.html`: the home page: full-screen reel, work tiles (each links to its case page), logo wall, About with portrait, contact. A short intro plays once per visit.
-- `work/<slug>/index.html`: case-study pages, **generated** by `python3 scripts/build_work.py`. Edit the `PROJECTS` list there, not the HTML. Facts come only from Taylor's resume and public coverage.
+- `work/<slug>/index.html`: case-study pages, **generated** by `python3 scripts/build_work.py`. Edit the `PROJECTS` list there, not the HTML. Facts come only from Taylor's resume and public coverage. Add `hero_vimeo="<id>"` to stream a project's Vimeo film as an HD silent background hero; it fades in once Vimeo reports playing, and the local clip or poster shows until then.
 - `assets/site.css`: the cinematic, reel-first design. It's near-black, set in Archivo (display lines in its 62% condensed width) with one neon-blue accent (#00a6ff). After editing CSS or JS, bump `?v=` in `index.html` and `V` in the build script.
 - `assets/site.js`: shared by every page. Intro, reel sound and progress, hover-to-play clips (on phones they play when centered), fade-ins, Chicago clock and the video lightbox. Videos pause whenever they're off screen.
 - `assets/video/reel.mp4`: the showreel (fast-start). `assets/clips/`: short silent 720p loops cut from the reel, each with a poster `.jpg`.
