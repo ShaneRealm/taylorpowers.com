@@ -1,0 +1,26 @@
+# The docs harness on every push and pull request: checks the docs against the code (scripts/docs-check.mjs,
+# a copy of handbook/tools/docs-harness/docs-check.mjs). In "warn" mode (docs/harness.json) it reports;
+# in "enforce" mode drift fails the check. The daily docs audit fixes what it finds and teaches it new rules.
+name: Docs match the code
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  docs:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 50
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - name: Check the docs against the code
+        run: node scripts/docs-check.mjs
