@@ -23,7 +23,7 @@
 
 ## Open improvements (not started)
 
-- **Security hygiene:** add DMARC (`_dmarc` TXT `v=DMARC1; p=quarantine`), CAA (letsencrypt.org, for GitHub's certificates) and DNSSEC on the Cloudflare zone. Response headers aren't possible on GitHub Pages; moving to Cloudflare Pages or Workers would allow them. See [../SECURITY.md](../SECURITY.md).
+- **Security hygiene:** add DMARC (`_dmarc` TXT `v=DMARC1; p=quarantine`), CAA (letsencrypt.org, for GitHub's certificates) and DNSSEC on the Cloudflare zone. The CSP and referrer policy are `<meta>` tags (2026-10-22); HSTS, `X-Frame-Options` and `nosniff` need response headers, which GitHub Pages can't set: proxy the site through Cloudflare with a response-header rule, or move it to Cloudflare Pages or Workers. See [../SECURITY.md](../SECURITY.md).
 - Remove the unused `_domainconnect` CNAME imported from GoDaddy.
 - A sending mailbox for taylor@ if Taylor wants to reply from that address.
 - Optional: replace the press stills with the owner's own photography.

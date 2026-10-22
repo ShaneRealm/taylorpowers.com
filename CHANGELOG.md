@@ -6,6 +6,8 @@ There are no version numbers; each entry is a date and the commits it covers. Th
 
 ## 2026-10-22
 
+- **Security:** every page has a Content-Security-Policy and a referrer policy as `<meta>` tags (GitHub Pages can't send headers): scripts and styles only from the site, Google Fonts, frames only from Vimeo and youtube-nocookie, `object-src 'none'`, `upgrade-insecure-requests`. The case pages get them from `scripts/build_work.py`. SECURITY.md updated.
+
 - **Docs:** the full documentation set, the docs harness and the "where we left off" status page ([docs/STATUS.md](docs/STATUS.md)).
 
 ## 2026-10-21

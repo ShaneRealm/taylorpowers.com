@@ -79,4 +79,4 @@ The script is one IIFE, and every part guards for missing elements so it can run
 
 - No HD footage yet for EGO, SKIL, MotoGP, UFC & WWE or Daytona.
 - The portrait is 800×800.
-- GitHub Pages can't set response headers (CSP, HSTS and so on), and the domain has no DMARC or CAA records yet. See [OPERATIONS.md](OPERATIONS.md).
+- GitHub Pages can't set response headers: the CSP and referrer policy are `<meta>` tags in every page (the case pages get them from the template in `scripts/build_work.py`); HSTS and anti-framing headers aren't possible there, and the domain has no DMARC or CAA records yet. See [OPERATIONS.md](OPERATIONS.md).

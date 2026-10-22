@@ -26,9 +26,10 @@ The contract for coding agents working on taylorpowers.com.
 2. **No scroll-driven animation and no scroll-jacking libraries.** Animate `transform` and `opacity` only. Pause off-screen video. See [docs/DECISIONS.md](docs/DECISIONS.md).
 3. **No "AI-made" decoration:** gradient text, glow blobs, grain, mono numbered eyebrows, italic-serif accent words, count-ups, pill chips, marquees.
 4. **Ask the owner before any redesign.** They have rejected several guessed directions.
-5. **Cache stamp:** after a CSS or JS change, bump `?v=` in `index.html` and `V` in `scripts/build_work.py` together.
-6. **Keep the phone number off the site.**
-7. **Pass the visual check before pushing:** preview at desktop and phone (375 px) widths, no horizontal overflow, no console errors.
+5. **Content-Security-Policy:** every page has a CSP `<meta>` (in `index.html` and the template in `scripts/build_work.py`; keep the two identical). Scripts and styles only from the site, no inline `<script>` or `style=`; fonts from Google Fonts; frames only from player.vimeo.com and www.youtube-nocookie.com. A new outside origin has to be added to both, or the browser blocks it.
+6. **Cache stamp:** after a CSS or JS change, bump `?v=` in `index.html` and `V` in `scripts/build_work.py` together.
+7. **Keep the phone number off the site.**
+8. **Pass the visual check before pushing:** preview at desktop and phone (375 px) widths, no horizontal overflow, no console errors.
 
 ## Conventions
 

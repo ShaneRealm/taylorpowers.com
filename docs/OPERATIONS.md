@@ -63,4 +63,4 @@ The preview config `taylorpowers` in `~/Strange/.claude/launch.json` runs `pytho
 
 ## Security gaps
 
-GitHub Pages can't set response headers, so there's no CSP or HSTS header. The domain has no DMARC or CAA record and no DNSSEC. See [../SECURITY.md](../SECURITY.md).
+GitHub Pages can't set response headers, so the Content-Security-Policy and referrer policy are `<meta>` tags in every page (`index.html` and the template in `scripts/build_work.py`). HSTS, `X-Frame-Options`/`frame-ancestors`, `nosniff` and the permissions policy can only be response headers: they need the site behind Cloudflare's proxy (with a response-header rule) or another host. The domain has no DMARC or CAA record and no DNSSEC. See [../SECURITY.md](../SECURITY.md).
