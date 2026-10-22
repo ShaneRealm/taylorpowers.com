@@ -2,11 +2,13 @@
 
 Site for Taylor Powers, brand and creative production executive: VP of Brand, brand management, managing director, account director, production and visual effects. It's a static site served by GitHub Pages at https://taylorpowers.com, and pushing to `main` deploys it.
 
-- `index.html`: the whole page: full-screen reel, selected work tiles, partners, about, contact.
-- `assets/site.css`: the cinematic, reel-first design. It's near-black, set in Archivo (display lines in its 62% condensed width) with one neon-blue accent (#00a6ff). After editing CSS or JS, bump `?v=` in `index.html`.
-- `assets/site.js`: reel sound toggle and progress line, hover-to-play work clips (on phones they play when centered on screen), fade-ins, Chicago clock and the video lightbox. Videos pause whenever they're off screen.
-- `assets/video/reel.mp4`: the showreel (fast-start). `assets/clips/`: short silent 720p loops cut from the reel (about 1 MB each, loaded only when needed), each with a poster `.jpg`.
-- `assets/img/`: press and work stills.
+- `index.html`: the home page: full-screen reel, work tiles (each links to its case page), logo wall, About with portrait, contact. A short intro plays once per visit.
+- `work/<slug>/index.html`: case-study pages, **generated** by `python3 scripts/build_work.py`. Edit the `PROJECTS` list there, not the HTML. Facts come only from Taylor's resume and public coverage.
+- `assets/site.css`: the cinematic, reel-first design. It's near-black, set in Archivo (display lines in its 62% condensed width) with one neon-blue accent (#00a6ff). After editing CSS or JS, bump `?v=` in `index.html` and `V` in the build script.
+- `assets/site.js`: shared by every page. Intro, reel sound and progress, hover-to-play clips (on phones they play when centered), fade-ins, Chicago clock and the video lightbox. Videos pause whenever they're off screen.
+- `assets/video/reel.mp4`: the showreel (fast-start). `assets/clips/`: short silent 720p loops cut from the reel, each with a poster `.jpg`.
+- `assets/logos/`: partner logos (Wikimedia Commons, Simple Icons, brand sites), shown white via CSS filters. Use `mono` for one-color logos and `inv` for multi-color ones.
+- `assets/img/`: press stills and `taylor-portrait.jpg` (800px; a larger original would be sharper). `assets/og.jpg`: the 1200×630 share card.
 
 Performance rule: no scroll-driven animation, no scroll-jacking libraries, and no scaling of SVG masks or large text. Earlier versions with those stuttered.
 
