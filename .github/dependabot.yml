@@ -1,0 +1,11 @@
+# Weekly updates for the GitHub Actions in .github/workflows, grouped into one pull request .
+# There's no package.json, so no npm updates.
+version: 2
+updates:
+  - package-ecosystem: github-actions
+    directory: /
+    schedule:
+      interval: weekly
+    groups:
+      actions:
+        patterns: ["*"]
